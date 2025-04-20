@@ -1,5 +1,6 @@
 import { useAudioClip } from "@/hooks/useAudioClip";
 import { Switcher } from "./Switcher";
+import { ThemeToggle } from "./ThemeToggle";
 import clsx from "clsx";
 import { External } from "./Icons";
 
@@ -51,12 +52,13 @@ export const Header = ({ devMode, setDevMode }: HeaderProps) => {
           </div>
         </div>
         <div className="col-span-10 md:col-span-3 xl:col-span-4 flex justify-end items-start order-2 md:order-3">
-          <div className="relative -top-[0.57rem]">
+          <div className="relative -top-[0.57rem] flex items-center gap-x-3">
             <Switcher
               checked={devMode}
               onChange={(checked) => setDevMode(checked)}
               id="dev-mode"
             />
+            <ThemeToggle />
           </div>
         </div>
       </div>

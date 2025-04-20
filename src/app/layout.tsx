@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import clsx from "clsx";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
 
 const jetBrainsMono = JetBrains_Mono({
   weight: "400",
@@ -39,7 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx("antialiased", jetBrainsMono.className)}>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

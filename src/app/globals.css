@@ -53,3 +53,11 @@ svg {
   display: block;
   flex-shrink: 0;
 }
+/* Dark mode variable overrides */
+html.dark {
+  --background: #111111;
+  --foreground: #f1f1f1;
+  --color-screen: #222222;
+  --color-black-10: rgba(255, 255, 255, 0.1);
+  --color-black-50: rgba(255, 255, 255, 0.5);
+}
